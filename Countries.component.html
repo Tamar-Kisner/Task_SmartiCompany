@@ -1,0 +1,62 @@
+<table>
+  <tr>
+    <td >
+      
+    </td>
+    <th class="title">Name</th>
+    <th class="title">Mainland</th>
+    <th class="title">PrimeMinister</th>
+  </tr>
+  <ng-template ngFor let-c [ngForOf]="items" let-i="index">
+    <tr>
+      <td class="content">{{ i }}</td>
+      <td class="content">{{ c.Name }}</td>
+      <td class="content">{{ c.Mainland }}</td>
+      <td class="content">{{ c.PrimeMinister }}</td>
+      <button class="big" (click)="UpdateCountry(i)" #country>Update</button>
+      <button class="big" (click)="DeleteCountry(i)">Delete</button>
+    </tr>
+  </ng-template>
+</table>
+
+<br />
+
+<div class="form" *ngIf="showUpdateForm">
+  <div class="header">Update</div>
+  <br />
+  <div><label>Name:</label><input [(ngModel)]="Name_Edit" /></div>
+  <br />
+  <div><label>Mainland:</label><input [(ngModel)]="Mainland_Edit" /></div>
+  <br />
+  <div>
+    <label>PrimeMinister:</label><input [(ngModel)]="PrimeMinister_Edit" />
+  </div>
+  <br />
+  <button (click)="submit(country)">Submit</button>
+</div>
+
+<br />
+
+<div class="form" *ngIf="showAddForm">
+  <div class="header">Add</div>
+  <br />
+  <div><label>Name:</label><input [(ngModel)]="Name_add" /></div>
+  <br />
+  <div><label>Mainland:</label><input [(ngModel)]="Mainland_add" /></div>
+  <br />
+  <div>
+    <label>PrimeMinater:</label><input [(ngModel)]="PrimeMinister_add" />
+  </div>
+  <br />
+  <button (click)="onSave()">Submit</button>
+</div>
+
+<br />
+
+<button id="small" *ngIf="showButtonAdd" (click)="AddCountry()">
+Add Country
+</button>
+
+<router-outlet></router-outlet>
+
+<!---->

@@ -1,0 +1,65 @@
+.form {
+  padding: 20px;
+  width: 200px;
+  margin: auto;
+  background-color: lightgray;
+  border: solid 2px darkslategrey;
+}
+
+table {
+  margin: auto;
+  background-color: lightgray;
+  border: solid 2px darkslategrey;
+}
+td {
+  padding-right: 40px;
+  padding-left: 40px;
+  padding-bottom: 15px;
+  padding-top: 15px;
+  border: solid 3px white;
+}
+.big {
+  border: solid 5px white;
+  padding-right: 80px;
+  padding-left: 80px;
+  padding-bottom: 30px;
+  padding-top: 30px;
+  font-size: medium;
+  background-color: rgb(84, 110, 110);
+  color: white;
+  margin: 5px;
+}
+
+#small {
+  border: none;
+  padding-right: 55px;
+  padding-left: 55px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  font-size: medium;
+  background-color: rgb(84, 110, 110);
+  color: white;
+}
+
+.title {
+  background-color: rgb(138, 182, 182);
+  color: white;
+  font-size: x-large;
+  border: solid 5px white;
+}
+
+.content {
+  font-size: larger;
+  border: solid 5px white;
+}
+
+.header {
+  background-color: rgb(84, 110, 110);
+  padding-right: 40px;
+  padding-left: 40px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  color: white;
+  font-size: larger;
+  text-align: center;
+}

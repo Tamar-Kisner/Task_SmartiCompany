@@ -1,0 +1,58 @@
+<table>
+  <tr>
+    <td>
+      
+    </td>
+    <th class="title">Name</th>
+    <th class="title">Artist</th>
+    <th class="title">Year</th>
+  </tr>
+  <ng-template ngFor let-p [ngForOf]="items" let-i="index">
+    <tr>
+      <td class="content">{{ i }}</td>
+      <td class="content">{{ p.Name }}</td>
+      <td class="content">{{ p.Artist }}</td>
+      <td class="content">{{ p.Year }}</td>
+      <button class="big" (click)="UpdatePainting(i)" #painting>Update</button>
+      <button class="big" (click)="DeletePainting(i)">Delete</button>
+    </tr>
+  </ng-template>
+</table>
+
+<br />
+
+<div class="form" *ngIf="showUpdateForm">
+  <div class="header">Update</div>
+  <br />
+  <div><label>Name:</label><input [(ngModel)]="Name_add" /></div>
+  <br />
+  <div><label>Artist:</label><input [(ngModel)]="Artist_add" /></div>
+  <br />
+  <div><label>Year:</label><input [(ngModel)]="Year_add" /></div>
+  <br />
+  <button (click)="submit()">Submit</button>
+</div>
+
+<br />
+
+<div class="form" *ngIf="showAddForm">
+  <div class="header">Add</div>
+  <br />
+  <div><label>Name:</label><input [(ngModel)]="Name_Edit" /></div>
+  <br />
+  <div><label>Artist:</label><input [(ngModel)]="Artist_Edit" /></div>
+  <br />
+  <div><label>Year:</label><input [(ngModel)]="Year_Edit" /></div>
+  <br />
+  <button (click)="submit(painting)">Submit</button>
+</div>
+
+<br />
+
+<button id="small" *ngIf="showButtonAdd" (click)="AddPainting()">
+Add Painting
+</button>
+
+<router-outlet></router-outlet>
+
+<!---->

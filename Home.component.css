@@ -1,0 +1,30 @@
+.Active {
+  background-color: rgb(68, 68, 68);
+  font-size: 25px;
+  color: white;
+}
+
+a {
+  color: rgb(25, 97, 126);
+  font-size: 25px;
+  background-color: rgb(134, 135, 136);
+  padding-right: 158.4px;
+  padding-left: 157px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-family: 'Arial';
+  margin-bottom: 20px;
+  text-decoration: none;
+  height: 50px;
+  position: relative;
+}
+
+div {
+  background-color: rgb(68, 68, 68);
+  position: relative;
+  height: 90px;
+  color: white;
+  padding: 30px;
+  font-family: 'Arial';
+  font-size: 80px;
+}

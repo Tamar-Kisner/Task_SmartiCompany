@@ -1,0 +1,58 @@
+<table>
+  <tr>
+    <td >
+      
+    </td>
+    <th class="title">Owner</th>
+    <th class="title">Model</th>
+    <th class="title">Year</th>
+  </tr>
+  <ng-template ngFor let-c [ngForOf]="items" let-i="index">
+    <tr>
+      <td class="content">{{ i }}</td>
+      <td class="content">{{ c.Owner }}</td>
+      <td class="content">{{ c.Model }}</td>
+      <td class="content">{{ c.Year }}</td>
+      <button class="big" (click)="UpdateCar(i)" #car>Update</button>
+      <button class="big" (click)="DeleteCar(i)">Delete</button>
+    </tr>
+  </ng-template>
+</table>
+
+<br />
+
+<div class="form" *ngIf="showUpdateForm">
+  <div class="header">Update</div>
+  <br />
+  <div><label>Owner:</label><input [(ngModel)]="Owner_Edit" /></div>
+  <br />
+  <div><label>Model:</label><input [(ngModel)]="Model_Edit" /></div>
+  <br />
+  <div><label>Year:</label><input [(ngModel)]="Year_Edit" /></div>
+  <br />
+  <button (click)="OnSvae(car)">Submit</button>
+</div>
+
+<br />
+
+<div class="form" *ngIf="showAddForm">
+  <div class="header">Add</div>
+  <br />
+  <div><label>Owner:</label><input [(ngModel)]="Owner_add" /></div>
+  <br />
+  <div><label>Model:</label><input [(ngModel)]="Model_add" /></div>
+  <br />
+  <div><label>Year:</label><input [(ngModel)]="Year_add" /></div>
+  <br />
+  <button (click)="submit()">Submit</button>
+</div>
+
+<br />
+
+<button id="small" *ngIf="showButtonAdd" (click)="AddCar()">
+Add Car
+</button>
+
+<router-outlet></router-outlet>
+
+<!---->
